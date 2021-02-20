@@ -1,7 +1,7 @@
 const frame_width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 const frame_height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 
-var MAX_ITER = 500;
+var MAX_ITER = 100;
 var BAILOUT = 100;
 var zoom = 400;
 var padding = 20;
@@ -59,8 +59,12 @@ const __palette = [
     [204, 128, 0],
     [153, 87,  0],
     [106, 52,  3]];
-_palette=__palette;
-genPalette(10);
+
+if(Math.random() < 0.1) {
+  _palette=__palette;
+} else {
+  genPalette(100);
+}
 
 function palette(i) {
   return _palette[i % _palette.length];
