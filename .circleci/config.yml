@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: bbrady/circleci-env:0.0.0
+
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "db:d0:77:0b:49:a9:91:21:3a:01:67:eb:06:24:41:ff"
+      - run:
+          .circleci/deploy.sh
