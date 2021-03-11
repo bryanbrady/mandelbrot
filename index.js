@@ -1,8 +1,8 @@
 const frame_width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 const frame_height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 
-var MAX_ITER = 100;
-var BAILOUT = 100;
+var MAX_ITER = 1000;
+var BAILOUT = 1000;
 var zoom = 400;
 var padding = 20;
 var W = frame_width - padding;
